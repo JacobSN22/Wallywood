@@ -4,7 +4,7 @@ import { HeaderStyle } from "../Style/header.style";
 export const Header = () => {
     return( 
         <HeaderStyle>
-            <h1>Wollywood</h1>
+            <h1>WALLYWOOD</h1>
         </HeaderStyle>
     )
 }
