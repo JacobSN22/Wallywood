@@ -6,5 +6,5 @@ export const Container = styled.div`
     width: 100%;
     max-width: ${props => props.maxwidth};
     margin: 0 auto;
-    paading: 40px;
+    padding: 40px;
     `
