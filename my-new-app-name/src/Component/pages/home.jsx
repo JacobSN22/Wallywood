@@ -1,7 +1,16 @@
 import React from 'react'
+import { PageHeader } from '../App/pageHeader/pageHeader'
+import { HomeStyle } from '../Style/home.style'
 
-export const home = () => {
+export const Home = () => {
   return (
-    <div>HEJ</div>
+    <>
+    <PageHeader title="Velkommen"/>
+    <HomeStyle>
+      <img src={require('../images/curtain.jpg')} alt="Wallywood" />
+    
+      <h2>Sidste nyt...</h2>
+    </HomeStyle>
+    </>
   )
 }

@@ -7,4 +7,13 @@ export const Container = styled.div`
     max-width: ${props => props.maxwidth};
     margin: 0 auto;
     padding: 40px;
+
+    header {
+        display: inline;
+    }
+
+    nav {
+        display: inline;
+        text-align: right;
+    }
     `
