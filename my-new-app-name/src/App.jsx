@@ -14,7 +14,7 @@ function App() {
         <NavBar />
         <hr color="#5C1F06"/>
         <Router />
-        <hr color="#5C1F06"/>
+        <hr color="#D1B3A7"/>
 
         <Footer />
       </Container>

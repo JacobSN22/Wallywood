@@ -18,7 +18,11 @@ export const FooterStyle = styled.footer`
         color: ${props => props.theme.colors.tertiary};
     }
 
-    svg {
+    .svg {
         text-align: right;
+    }
+
+    svg {
+        margin: 0 0.3em;
     }
 `
