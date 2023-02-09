@@ -13,7 +13,6 @@ export const PosterProvider = ({children}) => {
             const getData = async () => {
                 const result = await axios.get('http://localhost:4000/poster')
                 console.log(result);
-                
             }
             getData()
         }

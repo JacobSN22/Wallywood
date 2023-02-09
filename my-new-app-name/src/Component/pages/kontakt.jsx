@@ -14,7 +14,7 @@ export const Kontakt = () => {
       <input type="text" />
 
       <label htmlFor="">Din email: <span>*</span></label>
-      <input type="text" />
+      <input type="email" />
 
       <label htmlFor="">Din besked <span>*</span></label>
       <textarea name="" id="" cols="48" rows="10"></textarea>

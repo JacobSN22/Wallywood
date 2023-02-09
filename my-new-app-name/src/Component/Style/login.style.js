@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const KontaktStyle = styled.div`
+export const LoginStyle = styled.div`
     h2 {
         color: ${props => props.theme.colors.secondary};
         font-family: ${props => props.theme.fonts[0]};
@@ -21,12 +21,6 @@ export const KontaktStyle = styled.div`
 
     span {
         color: ${props => props.theme.colors.secondary};
-    }
-
-    textarea {
-        resize: none;
-        border-width: 0;
-        box-shadow: 0px -0.5px 0px 0px #D97852;
     }
 
     button {
