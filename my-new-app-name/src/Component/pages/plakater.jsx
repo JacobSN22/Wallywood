@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { PageHeader } from '../App/pageHeader/pageHeader'
 import { PlakaterStyled } from '../Style/plakater.style'
-import { useState } from 'react'
 import axios from 'axios'
 
 export const Plakater = () => {
