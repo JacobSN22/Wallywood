@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { Plakater } from '../../pages/plakater'
+import { Poster, PosterDetails, PosterList } from '../../pages/Poster'
 import { Home } from '../../pages/home'
 import { Om_os } from '../../pages/om_os'
 import { Kontakt } from '../../pages/kontakt'
@@ -10,7 +10,14 @@ export const Router = () => {
   return (
     <Routes>
         <Route index element={<Home/>} />
-        <Route path='/plakater' element={<Plakater/>} />
+        <Route path='/poster'>
+          <Route index element={<Poster />}/>
+          <Route path=':slug' element={<PosterList />}>
+            <Route path=':id' element={<PosterDetails />}/>
+          </Route>
+        </Route>
+
+        
         <Route path='/om_os' element={<Om_os/>} />
         <Route path='/kontakt' element={<Kontakt/>} />
         <Route path='/login' element={<Login/>} />
