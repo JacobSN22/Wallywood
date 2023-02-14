@@ -11,6 +11,7 @@ export const Poster = () => {
     <PosterStyled>
       <div><GenreList /></div>
       <div><PosterList /></div>
+      <div><PosterDetails /></div>
     </PosterStyled>
     </>
     )

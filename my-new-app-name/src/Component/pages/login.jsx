@@ -8,12 +8,11 @@ export const Login = () => {
   const submitHandle = async e => {
     const formdata = new URLSearchParams()
     formdata.append('username', e.target.form.username.value)
-    formdata.append('password', e.target.form.username.value)
-
+    formdata.append('password', e.target.form.password.value) 
     const endpoint = `http://localhost:4000/login`
     try {
       const result = await axios.post(endpoint, formdata)
-      handleSessionData(result)
+      handleSessionData(result.data)
     } catch(err) {
       console.error(`Kunne ikke logge ind: ${err}`)
     }
