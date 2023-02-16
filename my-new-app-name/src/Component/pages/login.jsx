@@ -1,9 +1,12 @@
 import axios from 'axios'
 import React from 'react'
 import { PageHeader } from '../App/pageHeader/pageHeader'
+import { useAuth } from '../Providers/AuthProvider'
 import { LoginStyle } from '../Style/login.style'
 
 export const Login = () => {
+
+  const { loginData, setloginData } = useAuth()
 
   const submitHandle = async e => {
     const formdata = new URLSearchParams()
@@ -21,14 +24,21 @@ export const Login = () => {
   const handleSessionData = data => {
     if(data) {
       sessionStorage.setItem('token', JSON.stringify(data))
+      setloginData(data)
     }
+  }
+
+  const LogOut = () => {
+    sessionStorage.removeItem('token')
+    setloginData('')
   }
 
   return (
     <>
       <LoginStyle>
         <PageHeader title="Login" />
-        <form method='POST'>
+        { !loginData ? (
+          <form method='POST'>
           <h2>Login</h2>
 
           <label htmlFor="username">Brugenavn: <span>*</span></label>
@@ -39,6 +49,15 @@ export const Login = () => {
 
           <button type='button' onClick={e => submitHandle(e)}>Login</button>
           </form>
+          
+        ) : (
+          <div>
+            <p>Du er logget ind</p> 
+            <button onClick={() => LogOut()}>Log ud</button>
+          </div>
+        )
+        }
+        
       </LoginStyle>
     </>
   )
